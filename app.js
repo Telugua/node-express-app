@@ -1,27 +1,30 @@
 const express = require('express')
 const app = express()
 
+<<<<<<< HEAD
+const hostname = '0.0.0.0'   // set constants
+=======
 const hostname = '0.0.0.0'    // allows access from remote computers
+>>>>>>> 88fd07af357af5d4c912b015e65ca5cf0b469532
 const port = 3002
 
 app.get('/', function (req, res) {
-  res.send('Welcome home!')
+  res.send('Hello All. I am fond of cars. click here'.fontcolor("blue").fontsize(1000).italics().link("http://www.fawadshaikh.com/images/panda.jpg"))})
+app.get('/abhi', function (req, res) {
+  res.send('<h1>My Friends are </h1><h3>Nandu-heroine,ravi-chandramukhi,samanth-police,guna-classical dancer,deepak-leki,battu-arabic</h3>'.fontcolor("purple").italics())
 })
 
-app.get('/hello', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.get('/big',  (req, res) =>{
-  res.send('<h1>Hello World!</h1>')
+app.get('/myself', (req, res) => {
+  res.send('<h3>I am introvert only before i am not close to someone</h3>')
 })
 
 app.get('/greeting/:id',  (req, res) =>{
   res.send('Hello! The id was ' + req.params.id)
 })
 
-app.get('/yo/:buddy',  (req, res) =>{
-  res.send('<h1>Yo, ' + req.params.buddy + '!</h1>')
+app.get('/hey/:dude',  (req, res) =>{
+  res.send('<h3>hey, ' + req.params.dude + ' How are you doing!</h3>')
+
 })
 
 // handle non-existant routes
@@ -33,4 +36,3 @@ app.listen(port, hostname, () => {
   console.log(`Example app listening at http://${hostname}:${port}/`)
   console.log('Hit CTRL-C CTRL-C to stop\n')
 })
-
